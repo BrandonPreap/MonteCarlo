@@ -36,8 +36,8 @@ before downloading the software. In practice, this licence imposes no
 restriction on using EGSnrc. However, if you want to further convey
 verbatim or modified versions of the code, or any work based on any
 EGSnrc component (including any such work operated remotely over a
-network), you must do so under the same licence terms.
-[Contact NRC](https://nrc.canada.ca/en/research-development/products-services/software-applications/egsnrc-software-tool-model-radiation-transport)
+network), you must do so under the same licence terms. Please
+[contact NRC](http://www.nrc-cnrc.gc.ca/eng/solutions/advisory/egsnrc_index.html)
 if you wish to licence EGSnrc under different terms.
 
 ## Prerequisites
@@ -61,10 +61,9 @@ wiki for more details about these software components.
 
 ## Installation
 
-Installation involves downloading the EGSnrc source code, and then configuring
-EGSnrc for your computer. We recommend using the `git` version control
-system to obtain the source code. The following shell command will clone the
-EGSnrc repository to your current working directory:
+EGSnrc can be installed on computers running Linux, macOS or Windows. Please
+read the [installation instructions](https://github.com/nrc-cnrc/EGSnrc/wiki/Installation-overview)
+for details on how to download and properly configure EGSnrc on your operating system.
 
 ```bash
 git clone https://github.com/nrc-cnrc/EGSnrc.git
@@ -80,11 +79,13 @@ for more details on how to download and configure EGSnrc.
 
 ## Support
 
-For technical support, consider the
-[EGSnrc reddit community](https://www.reddit.com/r/EGSnrc), or
-[contact NRC](https://nrc.canada.ca/en/research-development/products-services/software-applications/egsnrc-software-tool-model-radiation-transport).
-
-## Issues
+For technical support and questions, consider the
+[EGSnrc Google+ community](https://plus.google.com/communities/106437507294474212197), or
+[contact NRC](http://www.nrc-cnrc.gc.ca/eng/solutions/advisory/egsnrc_index.html). To report
+genuine bugs, defects or even small typos in the EGSnrc project please
+[submit an issue](https://github.com/nrc-cnrc/EGSnrc/issues). The issue tracker lets you
+browse and search all documented issues, comment on open issues, and track their
+progress. Note that the issue tracker is **not meant for technical support.**
 
 Use the [issue tracker](https://github.com/nrc-cnrc/EGSnrc/issues) to report
 genuine bugs, mistakes or even small typos in the EGSnrc project files. The
@@ -95,10 +96,12 @@ reproducible.
 
 ## Contributing
 
-You can contribute to the EGSnrc project by implementing new features,
-creating new data sets, correcting errors, or improving documentation.
-Feel free to submit small corrections and contributions as issues in the
-[issue tracker](https://github.com/nrc-cnrc/EGSnrc/issues). For more
-extensive contributions, familiarize yourself with git and github,
-work on your own EGSnrc fork and submit your changes via a
-[pull request](https://github.com/nrc-cnrc/EGSnrc/pulls).
+You can contribute to the EGSnrc project by implementing new features, creating
+new data sets, correcting errors, or improving documentation. For small
+corrections and improvements, feel free to
+[submit an issue](https://github.com/nrc-cnrc/EGSnrc/issues). For more extensive
+contributions, familiarize yourself with git and github, work on your own EGSnrc
+project fork and open a
+[pull request](https://github.com/nrc-cnrc/EGSnrc/issues). Note that significant
+contributions will require a transfer of copyright to the National Research
+Council of Canada before they can be merged into the EGSnrc distribution.
