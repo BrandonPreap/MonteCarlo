@@ -1366,38 +1366,27 @@ $start_new_particle;
                 "Do fast step in vacuum
                 IF(ustep ~= 0)
                 [
-                    IF $EM_MACROS_ACTIVE
-                    [
-                        edep = pzero; "no energy loss in vacuum
-                        "transport in EMF in vacuum:"
-                        "only a B or and E field can be active"
-                        "(not both at the same time)"
-                        $EMFieldInVacuum;
-                    ]
-                    ELSE
-                    [
-                        "Step in vacuum
-                        vstep  = ustep;
-                        tvstep = vstep;
-                        "( vstep is ustep truncated (possibly) by howfar
-                        " tvstep is the total curved path associated with vstep)
-                        edep = pzero; "no energy loss in vacuum
-                        $VACUUM-ADD-WORK-EM-FIELD;
-                            "additional vacuum transport in em field
-                        e_range = vacdst;
-                        $AUSCALL($TRANAUSB);
-                        "Transport the particle
-                        x(np) = x(np) + u(np)*vstep;
-                        y(np) = y(np) + v(np)*vstep;
-                        z(np) = z(np) + w(np)*vstep;
-                        dnear(np) = dnear(np) - vstep;
-                            "(dnear is distance to the nearest boundary
-                            " that goes along with particle stack and
-                            " which the user's howfar can supply (option)
-                        $SET-ANGLES-EM-FIELD;
-                            "default for $SET-ANGLES-EM-FIELD; is ; (null)
-                             "(allows for EM field deflection
-                    ] "end of EM_MACROS_ACTIVE block"
+                    "Step in vacuum
+                    vstep  = ustep;
+                    tvstep = vstep;
+                    "( vstep is ustep truncated (possibly) by howfar
+                    " tvstep is the total curved path associated with vstep)
+                    edep = pzero; "no energy loss in vacuum
+                    $VACUUM-TRANSPORT-EM-FIELD;
+                        "additional vacuum transport in em field
+                    e_range = vacdst;
+                    $AUSCALL($TRANAUSB);
+                    "Transport the particle
+                    x(np) = x(np) + u(np)*vstep;
+                    y(np) = y(np) + v(np)*vstep;
+                    z(np) = z(np) + w(np)*vstep;
+                    dnear(np) = dnear(np) - vstep;
+                        "(dnear is distance to the nearest boundary
+                        " that goes along with particle stack and
+                        " which the user's howfar can supply (option)
+                    $SET-ANGLES-EM-FIELD;
+                        "default for $SET-ANGLES-EM-FIELD; is ; (null)
+                         "(allows for EM field deflection
                 ] "end of vacuum step
 
                 IF(irnew ~= irold) [ $electron_region_change; ];
