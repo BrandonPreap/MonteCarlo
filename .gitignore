@@ -21,7 +21,6 @@ HEN_HOUSE/pieces/linux/egs_gui_*
 HEN_HOUSE/pieces/linux/egs_inprz_*
 HEN_HOUSE/pieces/linux/egs_view_*
 
-
 ### ignore generated documentation
 doc/*.pdf
 doc/src/*.pdf
@@ -39,7 +38,6 @@ html
 *.so
 
 ### ignore QT build folders
-
 .obj/
 .moc/
 .ui/
